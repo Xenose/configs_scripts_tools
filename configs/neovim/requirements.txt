@@ -1,0 +1,4 @@
+npm
+unzip
+wget
+python3
