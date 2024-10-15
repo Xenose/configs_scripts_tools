@@ -1,7 +1,7 @@
-#/bin/bash
+#!/bin/dash
 
-notify-user() {
-	if [ $(uname) = "Darwin" ]; then
+notify_user() {
+	if [ "$(uname)" = "Darwin" ]; then
 		osascript -e "display notification \"$1\""
    elif command -v powershell.exe > /dev/null; then
       powershell.exe -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('$1')"

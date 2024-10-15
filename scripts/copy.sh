@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/dash
 
 copy() {
-	local FILE_PATH="$1"
-	local RETURN_CODE=0
-	local MESSAGE="File copied to clipboard!"
+	FILE_PATH="$1"
+	RETURN_CODE=0
+	MESSAGE="File copied to clipboard!"
 
 	if [ -z "${FILE_PATH}" ]; then
 		MESSAGE="No file given"
@@ -58,6 +58,6 @@ copy() {
 		fi
 	fi
 
-	notify-user "${MESSAGE}"
+	notify_user "${MESSAGE}"
 	return "${RETURN_CODE}"
 }
